@@ -1,0 +1,14 @@
+/*font-family: 'Roboto Condensed', sans-serif;*/
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+
+}
+img {
+	width: 400px;
+}
+body>* {
+	border: 2px solid #ff0000;
+}
+body>*>* {
+	border: 2px solid #0000ff;
+}
