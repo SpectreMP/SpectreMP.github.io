@@ -45,46 +45,114 @@ nav
 {
     text-align: center;
 }
-.slider {
-	height: 500px;
-	background-color: #ccc;
-	position: relative;
-	overflow: hidden;
+.slider
+{
+    position: relative;
+
+    overflow: hidden;
+
+    height: 500px;
+
+    background-color: #ccc;
 }
-.slider ul {
-	list-style: none;
+.slider ul
+{
+    list-style: none;
 }
-.slider-item{
-	background-color: #fbb;
-	position: absolute;
-	width:100%;
-	height: 100%;
-	transition: 0.2s;
+.slider-item
+{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    transition: .2s;
+
+    background-color: #fbb;
 }
-.slider-navigation-button{
-	position: absolute;
-	width: 40px;
-	height: 100%;
-	transition: 0.2s;
+.slider-navigation-button
+{
+    position: absolute;
+
+    width: 100px;
+    height: 100%;
+
+    transition: .2s;
 }
 
-.slider:hover .slider-navigation-button {
-	background-color: rgba(0,0,0,0.2);
+.slider:hover .slider-navigation-button
+{
+    z-index: 5;
+
+    background-color: rgba(0,0,0,.2);
 }
 
-.slider-navigation-button.next {
-	right: 0;
+.slider-navigation-button.next
+{
+    right: 0;
 }
 
-.slider-left {
-	background-color: #bfb;
-	transform: translate(-100%,0);
+.slider-left
+{
+    transform: translate(-100%,0);
 }
-.slider-center {
-	background-color: #fbb;
-	transform: translate(0,0);
+.slider-center
+{
+    z-index: 3;
+
+    transform: translate(0,0);
 }
-.slider-right {
-	background-color: #bbf;
-	transform:translate(100%,0);
+.slider-right
+{
+    transform: translate(100%,0);
+}
+
+.slider-item:first-child
+{
+    background-color: #bfb;
+}
+.slider-item:nth-child(2)
+{
+    background-color: #fbb;
+}
+.slider-item:nth-child(3)
+{
+    background-color: #bbf;
+}
+.slider-fix
+{
+    z-index: 2;
+}
+.slider-buttons
+{
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    left: calc(50% - 100px);
+
+    display: flex;
+
+    width: 200px;
+    padding: 0;
+
+    list-style: none;
+
+    justify-content: space-around;
+}
+.slider:hover .slider-button
+{
+    background-color: rgba(0,0,0,.2);
+}
+.slider-button
+{
+    width: 20px;
+    height: 20px;
+
+    transition: .2s;
+
+    border-radius: 20px;
+}
+.slider-button-active
+{
+    background-color: #000;
 }
