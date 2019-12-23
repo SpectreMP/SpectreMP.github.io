@@ -7,15 +7,24 @@ const slides = document.querySelectorAll('.slider-item');
 function swipe(page){
 
 	Array.from(slides).map(function(el,num){
-		if(num>page){
-			el.classList.remove("slider-left","slider-center")
+		if (page==slides.length-1 && num==0){
+			el.classList.remove("slider-left","slider-center","slider-fix")
+			el.classList.add("slider-right")
+		} else if (page==0 && num==slides.length-1) {
+			el.classList.remove("slider-right","slider-center","slider-fix")
+			el.classList.add("slider-left")
+		} else if (num>page){
+			el.classList.remove("slider-left","slider-center","slider-fix")
 			el.classList.add("slider-right")
 		} else if (num == page) {
-			el.classList.remove("slider-left","slider-right")
+			el.classList.remove("slider-left","slider-right","slider-fix")
 			el.classList.add("slider-center")
 		} else {
-			el.classList.remove("slider-right","slider-center")
+			el.classList.remove("slider-right","slider-center","slider-fix")
 			el.classList.add("slider-left")
+		}
+		if (num == currentNumber) {
+			el.classList.add("slider-fix")
 		}
 	});
 	currentNumber = page
@@ -37,10 +46,10 @@ sliderScreen.addEventListener("touchstart", function(evt){
 sliderScreen.addEventListener("touchend", function(evt){
 	touch.finalX = evt.changedTouches[0].screenX
 	touch.distance = touch.finalX - touch.startX
-	if (touch.distance<screen.width*-0.15) {
+	if (touch.distance<screen.width*-0.25) {
 		swipe(currentNumber==slides.length-1?0:currentNumber+1)
 	}
-	if (touch.distance>screen.width*0.15){
+	if (touch.distance>screen.width*0.25){
 		swipe(currentNumber==0?slides.length-1:currentNumber-1)
 	}
 })
