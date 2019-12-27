@@ -156,3 +156,28 @@ nav
 {
     background-color: #000;
 }
+.review-content {
+    padding: 10px;
+    margin: 0;
+    box-shadow: 2px 2px 10px;
+}
+.review-name{
+    margin: 0;
+}
+.review-image {
+    width: 100px;
+    height: 100px;
+    background-color: #99b;
+    margin-right: 20px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px;
+}
+.review {
+    display:flex;
+    margin-bottom: 20px;
+}
+.advantages-list {
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
