@@ -2,15 +2,17 @@ body
 {
     font-family: 'Roboto Condensed', sans-serif;
 }
-
-main
-{
-    max-width: 1000px;
-    margin: 0 auto;
-}
 nav
 {
     background-color: #faa;
+}
+body {
+    margin:0;
+}
+main {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding:20px;
 }
 .nav-bar
 {
@@ -43,7 +45,12 @@ nav
 
 .header-title
 {
-    text-align: center;
+    font-size: 50px;
+    text-align: left;
+    color:white;
+    text-shadow: -1px 1px 2px #000, 1px 1px 2px #000,1px -1px 0 #000,-1px -1px 0 #000;
+    max-width: 1000px;
+    padding-left:20px;
 }
 .slider
 {
@@ -54,6 +61,8 @@ nav
     height: 500px;
 
     background-color: #ccc;
+
+    box-shadow: 0 0 6px 2px;
 }
 .slider ul
 {
@@ -70,6 +79,12 @@ nav
 
     background-color: #fbb;
     background-size: cover;
+}
+
+.slider-item-container {
+    margin:0 auto;
+    max-width: 1000px;
+    position: relative;
 }
 .slider-navigation-button
 {
@@ -111,6 +126,12 @@ nav
 .slider-item:first-child
 {
     background-color: #bfb;
+}
+.slider-logo {
+    position: absolute;
+    right:100px;
+    top:0;
+    width: 300px;
 }
 .slider-item:nth-child(2)
 {
