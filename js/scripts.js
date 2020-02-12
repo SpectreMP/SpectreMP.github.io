@@ -1,9 +1,23 @@
+//Начало кода слайдера
 const navigationButton = {
 	next: document.querySelector('.slider-navigation-button.next'),
 	previous: document.querySelector('.slider-navigation-button.previous.previous')
 }
 let currentNumber = 0;
-const slides = document.querySelectorAll('.slider-item');
+const slides = document.querySelectorAll('.slider-item'); //Здесь задаются слайды слайдера
+
+let sliderButton = document.querySelector('.slider-button').cloneNode(true); //Здесь задаётся образец навигационных кнопок слайдера
+for (let i = 0; i<slides.length-1;i++){
+	document.querySelector('.slider-buttons').appendChild(sliderButton);
+	sliderButton = document.querySelector('.slider-button').cloneNode(true);
+} // Кнопки клонируются нужное количество раз
+const sliderButtons = document.querySelectorAll('.slider-button');
+	console.log(sliderButtons)
+for (let i = 0; i<slides.length;i++){
+	sliderButtons[i].addEventListener("click",function(){swipe(i)})
+}
+
+
 function swipe(page){
 
 	Array.from(slides).map(function(el,num){
@@ -25,6 +39,13 @@ function swipe(page){
 		}
 		if (num == currentNumber) {
 			el.classList.add("slider-fix")
+		}
+		for(let i = 0;i<slides.length;i++){
+				if (i==page) {
+				sliderButtons[i].classList.add("slider-button-active")
+			} else {
+				sliderButtons[i].classList.remove("slider-button-active")
+			}
 		}
 	});
 	currentNumber = page
@@ -53,3 +74,4 @@ sliderScreen.addEventListener("touchend", function(evt){
 		swipe(currentNumber==0?slides.length-1:currentNumber-1)
 	}
 })
+//Конец кода слайдера

@@ -69,6 +69,7 @@ nav
     transition: .2s;
 
     background-color: #fbb;
+    background-size: cover;
 }
 .slider-navigation-button
 {
@@ -152,9 +153,9 @@ nav
 
     border-radius: 20px;
 }
-.slider-button-active
+.slider:hover .slider-button-active
 {
-    background-color: #000;
+    background-color: rgba(0,0,0,.6);
 }
 .review-content {
     padding: 10px;
