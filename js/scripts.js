@@ -12,7 +12,6 @@ for (let i = 0; i<slides.length-1;i++){
 	sliderButton = document.querySelector('.slider-button').cloneNode(true);
 } // Кнопки клонируются нужное количество раз
 const sliderButtons = document.querySelectorAll('.slider-button');
-	console.log(sliderButtons)
 for (let i = 0; i<slides.length;i++){
 	sliderButtons[i].addEventListener("click",function(){swipe(i)})
 }
@@ -75,3 +74,17 @@ sliderScreen.addEventListener("touchend", function(evt){
 	}
 })
 //Конец кода слайдера
+//Код выбора преймуществ
+const advantages = document.querySelectorAll('.advantages-list-item');
+console.log(advantages)
+for (let i = 0; i<advantages.length;i++){
+	advantages[i].addEventListener("click",function(){
+		for(let n=0;n<advantages.length;n++){
+			if (n==i) {
+				advantages[n].classList.toggle("advantages-list-item-active")
+			} else {
+				advantages[n].classList.remove("advantages-list-item-active")
+			}
+		}
+	})
+}
