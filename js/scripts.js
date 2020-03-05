@@ -76,7 +76,6 @@ sliderScreen.addEventListener("touchend", function(evt){
 //Конец кода слайдера
 //Код выбора преймуществ
 const advantages = document.querySelectorAll('.advantages-list-item');
-console.log(advantages)
 for (let i = 0; i<advantages.length;i++){
 	advantages[i].addEventListener("click",function(){
 		for(let n=0;n<advantages.length;n++){
@@ -88,3 +87,23 @@ for (let i = 0; i<advantages.length;i++){
 		}
 	})
 }
+//Конец кода выбора преймуществ
+//Код Поп-Апа
+const popButtons=document.querySelectorAll('.order-button');
+console.log(popButtons)
+popup = {
+	window:document.querySelector('.popup'),
+	overlay:document.querySelector('.overlay')
+}
+console.log(popup)
+for(let i=0; i<popButtons.length;i++){
+	popButtons[i].addEventListener("click",function(){
+		popup.window.classList.remove("hidden")
+		popup.overlay.classList.remove("hidden")
+		event.preventDefault()
+	})
+}
+popup.overlay.addEventListener("click",function(){
+	popup.overlay.classList.add("hidden")
+	popup.window.classList.add("hidden")
+})
