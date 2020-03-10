@@ -302,9 +302,13 @@ main
     border: 2px solid black;
     width: 350px;
     height: 200px;
+    background-size: cover;
 }
 .examples-list-item:nth-child(1) {
-    background: url(../img/redpattern.jpg)
+    background-image: url(../img/example1.png)
+}
+.examples-list-item:nth-child(2) {
+    background-image: url(../img/example2.png)
 }
 .examples-list-item>a{
     display: block;
