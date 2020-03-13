@@ -159,7 +159,7 @@ main
 
 .slider-item:first-child
 {
-    background-color: #bfb;
+    background-color: #bbf;
 }
 .slider-logo
 {
@@ -171,11 +171,11 @@ main
 }
 .slider-item:nth-child(2)
 {
-    background-color: #fbb;
+    background-color: #bfb;
 }
 .slider-item:nth-child(3)
 {
-    background-color: #bbf;
+    background-color: #fbb;
 }
 .slider-fix
 {
