@@ -10,6 +10,7 @@ main
     padding: 20px;
 }
 
+
 .hidden{
     display: none;
 }
@@ -219,12 +220,13 @@ main
 /*Стили преймуществ*/
 
 .advantages {
-    margin-bottom: 80px;
+    margin-bottom: 160px;
 }
 
 .advantages-title {
     font-size:70px;
     text-align: center;
+    font-family: 'Bellota', cursive;
 }
 
 
@@ -284,13 +286,15 @@ main
 /*Стили примеров*/
 
 .examples{
-    margin-bottom: 80px;
+    margin-bottom: 160px;
+    border-top: 5px double #99dd99;
 }
 
 
 .examples-header{
     text-align: center;
     font-size: 70px;
+    font-family: 'Bellota', cursive;
 }
 
 .examples-list{
@@ -320,10 +324,12 @@ main
 
 .contacts{
     text-align: center;
+    border-top: 5px double #99dd99;
 }
 
 .contacts-header{
     font-size:70px;
+    font-family: 'Bellota', cursive;
 }
 
 .contacts-paragraph{
@@ -385,4 +391,33 @@ footer{
     width: 900px;
     height: 600px;
     background-color: white;
+}
+
+/*Стили прайс-листа*/
+
+.price-list{
+    margin-bottom: 160px;
+    padding: 20px;
+    border-top: 5px double #99dd99;
+}
+
+.price-list-header{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Bellota', cursive;
+}
+
+.price-list-container {
+    display: flex;
+    justify-content: space-around;
+}
+.price-list-item{
+    text-align: center;
+}
+.service-name{
+    font-size:40px;
+    color: #222266;
+}
+.price{
+    font-size: 40px;
 }
