@@ -90,12 +90,11 @@ for (let i = 0; i<advantages.length;i++){
 //Конец кода выбора преймуществ
 //Код Поп-Апа
 const popButtons=document.querySelectorAll('.order-button');
-console.log(popButtons)
 popup = {
 	window:document.querySelector('.popup'),
-	overlay:document.querySelector('.overlay')
+	overlay:document.querySelector('.overlay'),
+	send:document.querySelector('.popup-send')
 }
-console.log(popup)
 for(let i=0; i<popButtons.length;i++){
 	popButtons[i].addEventListener("click",function(){
 		popup.window.classList.remove("hidden")
@@ -104,6 +103,10 @@ for(let i=0; i<popButtons.length;i++){
 	})
 }
 popup.overlay.addEventListener("click",function(){
+	popup.overlay.classList.add("hidden")
+	popup.window.classList.add("hidden")
+})
+popup.send.addEventListener("click",function(){
 	popup.overlay.classList.add("hidden")
 	popup.window.classList.add("hidden")
 })

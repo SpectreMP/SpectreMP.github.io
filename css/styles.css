@@ -389,8 +389,54 @@ footer{
     left:50%;
     transform: translate(-50%,-50%);
     width: 900px;
-    height: 600px;
     background-color: white;
+    padding: 50px;
+}
+
+.popup-label>.time {
+    width: auto;
+}
+
+.popup-header{
+    font-size: 50px;
+    text-align: center;
+}
+
+.popup-label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 30px;
+
+}
+
+.popup-label h2{
+    font-weight: 200;
+    font-size: 30px;
+    margin: 0;
+}
+.popup input{
+    font-size: 30px;
+    width: 400px;
+    font-style: italic;
+    border: 2px solid black;
+    margin:0 10px;
+}
+
+.popup>.popup-send{
+    display:inline-block;
+    padding: 10px 20px;
+    background-color: #484;
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    font-style: normal;
+}
+
+.popup-send:hover{
+    background-color: #373;
 }
 
 /*Стили прайс-листа*/
@@ -421,3 +467,5 @@ footer{
 .price{
     font-size: 40px;
 }
+
+
