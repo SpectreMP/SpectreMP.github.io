@@ -1,8 +1,7 @@
-//Начало кода слайдера
 const navigationButton = {
 	next: document.querySelector('.slider-navigation-button.next'),
-	previous: document.querySelector('.slider-navigation-button.previous.previous')
-}
+	previous: document.querySelector('.slider-navigation-button.previous')
+} //Здесь задаются кнопки переключающие вперёд и назад
 let currentNumber = 0;
 const slides = document.querySelectorAll('.slider-item'); //Здесь задаются слайды слайдера
 
@@ -12,6 +11,7 @@ for (let i = 0; i<slides.length-1;i++){
 	sliderButton = document.querySelector('.slider-button').cloneNode(true);
 } // Кнопки клонируются нужное количество раз
 const sliderButtons = document.querySelectorAll('.slider-button');
+	console.log(sliderButtons)
 for (let i = 0; i<slides.length;i++){
 	sliderButtons[i].addEventListener("click",function(){swipe(i)})
 }
@@ -72,41 +72,4 @@ sliderScreen.addEventListener("touchend", function(evt){
 	if (touch.distance>screen.width*0.25){
 		swipe(currentNumber==0?slides.length-1:currentNumber-1)
 	}
-})
-//Конец кода слайдера
-//Код выбора преймуществ
-const advantages = document.querySelectorAll('.advantages-list-item');
-for (let i = 0; i<advantages.length;i++){
-	advantages[i].addEventListener("click",function(){
-		for(let n=0;n<advantages.length;n++){
-			if (n==i) {
-				advantages[n].classList.toggle("advantages-list-item-active")
-			} else {
-				advantages[n].classList.remove("advantages-list-item-active")
-			}
-		}
-	})
-}
-//Конец кода выбора преймуществ
-//Код Поп-Апа
-const popButtons=document.querySelectorAll('.order-button');
-popup = {
-	window:document.querySelector('.popup'),
-	overlay:document.querySelector('.overlay'),
-	send:document.querySelector('.popup-send')
-}
-for(let i=0; i<popButtons.length;i++){
-	popButtons[i].addEventListener("click",function(){
-		popup.window.classList.remove("hidden")
-		popup.overlay.classList.remove("hidden")
-		event.preventDefault()
-	})
-}
-popup.overlay.addEventListener("click",function(){
-	popup.overlay.classList.add("hidden")
-	popup.window.classList.add("hidden")
-})
-popup.send.addEventListener("click",function(){
-	popup.overlay.classList.add("hidden")
-	popup.window.classList.add("hidden")
 })

@@ -1,90 +1,9 @@
-body
-{
-    font-family: 'Roboto Condensed', sans-serif;
-    margin: 0;
-}
-main
-{
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+main {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
 }
 
-
-.hidden{
-    display: none;
-}
-
-/*Стили слвайдера*/
-
-.header-title
-{
-    font-size: 50px;
-
-    max-width: 1000px;
-
-    text-align: left;
-
-    color: white;
-    text-shadow: -1px 1px 2px #000, 1px 1px 2px #000,1px -1px 0 #000,-1px -1px 0 #000;
-}
-.header-paragraph
-{
-    font-size: 30px;
-
-    color: white;
-}
-
-.order-button
-{
-    font-weight: 900;
-
-    display: inline-block;
-
-    margin-top: 40px;
-    padding: 20px;
-
-    text-decoration: none;
-
-    box-shadow: 0 0 3px 0;
-}
-.order-button:hover
-{
-    box-shadow: 0 0 5px -2px black;
-}
-
-.blue-button
-{
-    color: white;
-    background-color: #227;
-}
-.blue-button:hover
-{
-    background-color: #449;
-}
-
-.green-button
-{
-    color: white;
-    background-color: #272;
-}
-.green-button:hover
-{
-    background-color: #494;
-}
-
-.red-button
-{
-    color: white;
-    background-color: #722;
-}
-.red-button:hover
-{
-    background-color: #944;
-}
-
-
-
+/* Стили слайдера */
 .slider
 {
     position: relative;
@@ -96,13 +15,16 @@ main
     background-color: #ccc;
     box-shadow: 0 0 6px 2px;
 }
-.slider ul
+
+.slider .buttons
 {
     list-style: none;
 }
+
 .slider-item
 {
     position: absolute;
+    background-position: center;
 
     width: 100%;
     height: 100%;
@@ -110,7 +32,7 @@ main
     transition: .2s;
 
     background-color: #fbb;
-    /*background-size: cover;*/
+    background-size: cover;
 }
 
 .slider-item-container
@@ -119,8 +41,13 @@ main
 
     max-width: 1000px;
     margin: 0 auto;
-    padding-left: 20px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
+
 .slider-navigation-button
 {
     position: absolute;
@@ -147,41 +74,25 @@ main
 {
     transform: translate(-100%,0);
 }
+
 .slider-center
 {
     z-index: 3;
 
     transform: translate(0,0);
 }
+
 .slider-right
 {
     transform: translate(100%,0);
 }
 
-.slider-item:first-child
-{
-    background-color: #bbf;
-}
-.slider-logo
-{
-    position: absolute;
-    top: 0;
-    right: 100px;
 
-    height: 380px;
-}
-.slider-item:nth-child(2)
-{
-    background-color: #bfb;
-}
-.slider-item:nth-child(3)
-{
-    background-color: #fbb;
-}
 .slider-fix
 {
     z-index: 2;
 }
+
 .slider-buttons
 {
     position: absolute;
@@ -190,282 +101,122 @@ main
     left: calc(50% - 100px);
 
     display: flex;
-
+    
     width: 200px;
     padding: 0;
-
+    
     list-style: none;
-
+    
     justify-content: space-around;
 }
+
 .slider:hover .slider-button
 {
     background-color: rgba(0,0,0,.4);
 }
+
 .slider-button
 {
     width: 20px;
     height: 20px;
-
+    
     transition: .2s;
-
+    
     border-radius: 20px;
 }
+
 .slider:hover .slider-button-active
 {
     background-color: rgba(0,0,0,.8);
     box-shadow: 0 0 3px white;
 }
 
-/*Стили преймуществ*/
-
-.advantages {
-    margin-bottom: 160px;
-}
-
-.advantages-title {
-    font-size:70px;
-    text-align: center;
-    font-family: 'Bellota', cursive;
-}
-
-
-.advantages-list
+.slider-item-container p
 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    margin: auto 0;
+}
+/* Конец стилей слайдера */
+
+
+.main-headline {
+    min-height: 100px;
+    padding: 10px;
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     display: flex;
-
-    list-style: none;
-
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    padding:0;
-    position: relative;
 }
-.advantages-list-item{
+.main-headline-logo {
+    height: 100px;
+    position:absolute;
+    left: 10px;
+    top: 10px;
+
+}
+
+.main-headline-text {
+
+    color: #0b1d57;
+    max-width: 70%;
+    margin: auto;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-container-header {
     text-align: center;
-    width: 250px;
-    -webkit-transition: all 1s cubic-bezier(0, .80, .30, 1);
-    -moz-transition: all 1s cubic-bezier(0, .80, .30, 1);
+    margin-top: 100px;
 }
 
-.advantages-list-item>p{
-    display: none;
+.main-illustration {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    grid-template-rows: minmax(200px, auto);
+    gap: 20px;
 }
-.advantages-list-item>img{
-    width: 100%;
+.main-illustration p {
+    margin: 10px;
 }
-.advantages-list-item>h2{
-    font-size: 30px;
-}
-
-.advantages-list-item-active{
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    height:500px;
-    flex-wrap: wrap;
-    order:-1;
-}
-.advantages-list-item-active>p{
-    display:block;
-    transition: inherit;
-    font-size: 30px;
-    word-wrap: break-word;
-}
-.advantages-list-item-active>img{
-    width:50%;
-    order: -1;
-}
-.advantages-list-item-active>h2{
-    font-size: 60px;
-    transition: inherit;
-
+.main-illustration p>a {
+    font-weight: bold;
 }
 
-/*Стили примеров*/
-
-.examples{
-    margin-bottom: 160px;
-    border-top: 5px double #99dd99;
-}
-
-
-.examples-header{
-    text-align: center;
-    font-size: 70px;
-    font-family: 'Bellota', cursive;
-}
-
-.examples-list{
-    display:flex;
-    justify-content: space-around;
-}
-
-.examples-list-item {
-    border: 2px solid black;
-    width: 350px;
-    height: 200px;
+.main-container-image {
+    background-position: center;
     background-size: cover;
 }
-.examples-list-item:nth-child(1) {
-    background-image: url(../img/example1.png)
-}
-.examples-list-item:nth-child(2) {
-    background-image: url(../img/example2.png)
-}
-.examples-list-item>a{
-    display: block;
-    width:100%;
-    height: 100%;
+
+.main-list {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,auto));
+    gap: 25px;
+    
 }
 
-/*Стили контактов*/
-
-.contacts{
-    text-align: center;
-    border-top: 5px double #99dd99;
-}
-
-.contacts-header{
-    font-size:70px;
-    font-family: 'Bellota', cursive;
-}
-
-.contacts-paragraph{
-    font-size: 26px;
-}
-
-.contacts-button{
-    margin-bottom: 80px;
-    padding: 40px 60px;
-    font-size: 40px;
+.main-list-element {
     color: white;
-    background-color: #484;
-}
-.contacts-button:hover{
-    background-color: #373;
-}
-
-.contacts-media-buttons{
-    display: flex;
-    justify-content: space-around;
-}
-
-.contacts-media-buttons>a{
-    display: block;
-    width: 120px;
-    height: 120px;
-}
-.contacts-media-buttons>a>img{
-    width:100%;
-    height: 100%;
-}
-
-/*Стили футера*/
-
-footer{
-    margin-top: 100px;
-    background-color: #22334f;
-    padding: 30px;
-    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    background-color: #0b1d57;
+    padding: 15px;
     text-align: center;
 }
 
-/*Стили поп-апа*/
-
-.overlay{
-    position: fixed;
-    width:100%;
-    height: 100%;
-    top:0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 5
+footer {
+    background-color: #0b1d57;
+    color: #fff;
+    padding:30px;
 }
-.popup{
-    z-index: 6;
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width: 900px;
-    background-color: white;
-    padding: 50px;
-}
-
-.popup-label>.time {
-    width: auto;
-}
-
-.popup-header{
-    font-size: 50px;
-    text-align: center;
-}
-
-.popup-label {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: 200;
-    font-size: 30px;
-
-}
-
-.popup-label h2{
-    font-weight: 200;
-    font-size: 30px;
-    margin: 0;
-}
-.popup input{
-    font-size: 30px;
-    width: 400px;
-    font-style: italic;
-    border: 2px solid black;
-    margin:0 10px;
-}
-
-.popup>.popup-send{
-    display:inline-block;
-    padding: 10px 20px;
-    background-color: #484;
-    color: white;
-    text-decoration: none;
-    font-size: 40px;
-    text-align: center;
-    border: none;
-    font-style: normal;
-}
-
-.popup-send:hover{
-    background-color: #373;
-}
-
-/*Стили прайс-листа*/
-
-.price-list{
-    margin-bottom: 160px;
-    padding: 20px;
-    border-top: 5px double #99dd99;
-}
-
-.price-list-header{
-    text-align: center;
-    font-size: 70px;
-    font-family: 'Bellota', cursive;
-}
-
-.price-list-container {
-    display: flex;
-    justify-content: space-around;
-}
-.price-list-item{
-    text-align: center;
-}
-.service-name{
-    font-size:40px;
-    color: #222266;
-}
-.price{
-    font-size: 40px;
-}
-
-
